@@ -1,0 +1,98 @@
+<!--
+Mounir Darwich
+moda2202
+moda2202@student.miun.se
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/background2.jpg">
+</head>
+
+<body>
+    <!-- Header with a logo and title -->
+    <header id="header">
+        <img id="headerImage" src="./img/typewriter.jpg" alt="typewriter image">
+        <h1>Typing.Speed</h1>
+    </header>
+    <!-- Main content section with various elements -->
+    <main id="main_section">
+        <section>
+            <!-- Form elements for selecting text and setting options -->
+            <label for="text-selector">Pick text</label>
+            <select name="text-selector" id="text-selector" class="text-fields">
+                <option value="none" disabled hidden selected>Select one text..</option>
+            </select>
+            <section class="tt-row">
+                <!-- Radio buttons for selecting language -->
+                <p id="preferred-language">
+                    <label for="language-swe">Swedish</label>
+                    <input name="language-settings" class="choice-box radio-box" id="language-swe" type="radio"
+                        value="sv">
+                    <label for="language-eng">English</label>
+                    <input name="language-settings" class="choice-box radio-box" id="language-eng" type="radio"
+                        value="en">
+                </p>
+                <!-- Checkbox for ignoring casing -->
+                <p>
+                    <label for="casing">Ignore casing </label>
+                    <input name="setting" class="choice-box checkbox-box" id="casing" type="checkbox">
+                </p>
+            </section>
+            <!-- Section for displaying text content -->
+            <section class="tt-text-content">
+                <!-- <h2 id="text-name">Informational text</h2>
+                <h3 id="text-author">Moda</h3> -->
+                    <h2 id="text-name">Informational text</h2>
+                    <h3 id="text-author">Moda</h3>
+                    <p id="text-field">The text you choose will be shown in this field. Once you've
+                        selected the language then your text and pressed the play button, the input field underneath this block will be
+                        focused and the game will start. <br> Good luck!
+                    </p>
+            </section>
+            <!-- This section contains a form for entering text and a button for starting/stopping the game -->
+            <section class="tt-column">
+                <label for="text-input"></label>
+                <input type="text" id="text-input" class="text-fields" placeholder="Enter text here.."
+                    autocomplete="off">
+                <button value="stop" type="button" id="img_green" class="play-stop" aria-label="play-stop"></button>
+            </section>
+            <!-- This section displays a canvas element for rendering a graph and a list of result details -->
+            <section class="tt-row">
+                <!-- <canvas id="stat-graph" height="100" width="300"></canvas> -->
+                    <ul class="result-details">
+                        <li class="gross-wpm">
+                            <p>Gross WPM: <span>0</span></p>
+                        </li>
+                        <li class="mistake">
+                            <p>Errors: <span>0</span></p>
+                        </li>
+                        <li class="Net-WPM">
+                            <p>Net WPM:<span>0</span></p>
+                        </li>
+                        <li class="Accuracy">
+                            <p>Accuracy:<span>0</span></p>
+                        </li>
+                    </ul>
+            </section>
+            <section id="canvas"><canvas id="stat-graph" height="100" width="300"></canvas></section>
+        </section>
+    </main>
+    <footer>
+        <hr class="footer_line">
+        <p>
+            Copyright &COPY; 2022 Mounir Darwich <br>
+            <a href="mailto:mounirdatwich22@gmail.com"> contact me!</a>
+        </p>
+    </footer>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

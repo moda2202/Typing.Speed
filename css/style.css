@@ -1,0 +1,284 @@
+@font-face {
+    /* Import the "alpha" font from the "alpha_echo.ttf" file */
+    font-family: "alpha";
+    src: url("../font/alpha_echo.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* Import the "edo" font from the "edo.ttf" file */
+    font-family: "edo";
+    src: url("../font/edo.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* Import the "Roboto" font from the "Roboto_Mono.ttf" file, with an italic style */
+    font-family: "Roboto";
+    src: url("../font/Roboto_Mono.ttf");
+    font-style: normal;
+}
+
+body {
+    /* Style the body element */
+    max-width: 600px;
+    margin: auto;
+    /* Set the background image */
+    background-image: url("../img/background2.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+    padding-bottom: 50px;
+
+}
+
+/* Style the #headerImage element */
+#headerImage {
+    width: 140px;
+    height: 120px;
+    float: left;
+
+}
+
+/* Style the #header element */
+#header {
+    padding: 50px;
+    background: rgba(221, 205, 205, 0.979);
+    box-shadow: 3px 3px 10px rgb(216, 205, 205);
+    border-radius: 20px;
+
+}
+
+#header h1 {
+    /* Apply the "font" animation to the element */
+    animation: font 5s infinite;
+    font-family: alpha;
+}
+
+
+/* Style the tt-text-content element */
+.tt-text-content {
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(240, 243, 245);
+    height: fit-content;
+    width: auto;
+    text-align: left;
+    padding: 15px;
+    border: 3px solid rgba(255, 217, 0, 0.644);
+    border-width: 4px;
+    font-family: "Roboto Thin";
+    font-size: 20px;
+
+}
+
+/* Style the h2 element within the tt-text-content element */
+.tt-text-content h2 {
+    text-align: center;
+    color: yellow;
+    font-family: edo;
+}
+
+/* Style the h3 element within the tt-text-content element */
+.tt-text-content h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: center;
+    color: yellow;
+}
+
+/* Define the "font" animation */
+@keyframes font {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+
+    20% {
+        color: red;
+    }
+
+    40% {
+        color: yellow;
+    }
+
+    60% {
+        color: rgb(255, 0, 221);
+    }
+
+    80% {
+        color: orange;
+    }
+
+    100% {
+        color: forestgreen;
+    }
+}
+
+
+
+/* Style the main section element */
+#main_section {
+    text-align: center;
+    background: rgba(221, 205, 205, 0.979);
+    box-shadow: 3px 3px 10px rgb(216, 205, 205);
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 120px;
+    font-family: edo;
+
+}
+
+
+/* Style the footer element */
+footer {
+    width: 97%;
+    position: absolute;
+    padding: 10px;
+    font-size: 18PX;
+    font-weight: bolder;
+    background: rgba(245, 243, 243, 0.979);
+    box-shadow: 3px 3px 10px rgb(216, 205, 205);
+    border-radius: 20px;
+    color: rgb(5, 0, 0);
+    text-align: center;
+    bottom: 0;
+    height: 110px;
+}
+
+/* Style the #img_green element */
+
+#img_green {
+    margin: auto;
+    margin-top: 20px;
+    background-image: url("../img/green-button.png");
+    width: 50px;
+    height: 45px;
+    border: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    background-size: cover;
+}
+
+
+/* Style the #img_red element */
+#img_red {
+    margin: auto;
+    margin-top: 20px;
+    background-image: url("../img/red2.png");
+    width: 50px;
+    height: 45px;
+    border: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    background-size: cover;
+
+}
+
+
+/* Style the .tt-column element */
+.tt-column {
+    display: flex;
+    padding: 20px;
+    align-content: center;
+}
+
+/* The start/stop button for the typing game */
+.play-stop {
+    text-align: center;
+}
+
+/* The text input field where the user types */
+#text-input {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    border: 3px solid yellow;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(240, 243, 245);
+}
+
+/* The height of the text input field */
+#text-input {
+    height: 40px;
+
+}
+
+/* The canvas element for the typing game stats graph */
+#stat-graph {
+    border: black solid 3px;
+    margin: auto;
+    background-color: rgba(17, 0, 0, 0.877);
+    float: right;
+}
+
+/* The footer separator line */
+.footer_line {
+    width: 100%;
+    border-width: 2px;
+
+}
+
+/* The class for correct characters in the text field */
+.correct {
+    color: rgba(147, 150, 147, 0.473);
+
+}
+
+/* The class for incorrect characters in the text field */
+.incorrect {
+    color: red;
+    background-color: rgba(235, 10, 10, 0.363);
+
+}
+
+/* The span elements within the text field paragraphs */
+#text-field p span {
+    position: relative;
+}
+
+
+/* The class for the current character in the text field */
+.active {
+    background: #f8fbfc5e;
+}
+
+
+/* The list items for the result details */
+.result-details li {
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    font-family: "Arial Black";
+    padding: 0 14px;
+    background-color: rgba(241, 241, 241, 0.267);
+    margin: 4px;
+    margin-left: 17px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px black;
+    align-content: center;
+    line-height: 38px;
+    width: 140px;
+
+}
+
+/* The container for the canvas element */
+#canvas {
+    margin-bottom: 140px;
+    margin-right: 100px;
+
+}
+
+/* The canvas element within the container */
+#canvas canvas {
+    box-shadow: 3px 3px 10px rgb(243, 7, 7);
+}
